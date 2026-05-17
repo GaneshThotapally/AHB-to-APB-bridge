@@ -1,5 +1,197 @@
-# AHB-to-APB-bridge
-This project focuses on the design and implementation of an FSM-controlled AHB to APB Bridge using Verilog HDL. The bridge acts as an interface between the high-speed Advanced High-performance Bus (AHB) and the low-speed Advanced Peripheral Bus (APB) in AMBA-based System-on-Chip (SoC) architectures.
+<h1 align="center">🔀 FSM Controlled AHB to APB Bridge</h1>
+
+<p align="center">
+A Verilog HDL based AMBA protocol bridge that connects the high-speed AHB bus with the low-speed APB bus using a Finite State Machine (FSM) controller.
+</p>
+
+---
+
+## 📌 Overview
+
+This project implements an FSM-controlled AHB to APB Bridge for AMBA-based System-on-Chip (SoC) architectures.
+
+The bridge acts as an interface between:
+
+- ⚡ Advanced High-performance Bus (AHB)
+- 🔋 Advanced Peripheral Bus (APB)
+
+The FSM controller manages protocol conversion, synchronization, and data transfer between the two buses efficiently.
+
+The design supports both read and write operations while ensuring proper timing and reliable communication between high-speed processors and low-speed peripheral devices.
+
+---
+
+## ✨ Features
+
+- 🔄 AHB to APB Protocol Conversion
+- 🧠 FSM-Based Control Logic
+- 📥 Read Operation Support
+- 📤 Write Operation Support
+- ⚡ Efficient Data Transfer
+- 🖥️ Verilog HDL Implementation
+- 📊 Simulation & Waveform Verification
+- 🔋 Low-Power Peripheral Communication
+- 🧩 Modular Design Architecture
+- 🚀 AMBA Compliant Design
+
+---
+
+## 🛠️ Technologies Used
+
+- Verilog HDL
+- FSM Design
+- AMBA AHB Protocol
+- AMBA APB Protocol
+- Digital System Design
+- ModelSim
+- Xilinx Vivado
+
+---
+
+## ⚙️ Working Principle
+
+- AHB master initiates a transaction
+- FSM detects the transfer type
+- Address and control signals are decoded
+- Bridge converts AHB transactions into APB-compatible signals
+- APB peripheral performs read/write operation
+- Data is transferred back to AHB master
+- FSM controls setup, enable, and transfer phases
+- Synchronization ensures reliable communication
+
+---
+
+## 🧠 FSM States
+
+The FSM controller consists of multiple states:
+
+- IDLE State
+- READ State
+- WRITE State
+- SETUP State
+- ENABLE State
+- WAIT State
+
+These states manage protocol timing and bus control operations.
+
+---
+
+## 📂 Project Modules
+
+- AHB Slave Interface
+- APB Controller
+- FSM Controller
+- Address Decoder
+- Data Path Logic
+- Top Module
+- Testbench
+
+---
+
+## 🚀 How to Run
+
+### Step 1 — Open Project
+
+Open the project in:
+
+- ModelSim
+- Vivado
+- Xilinx ISE
+
+---
+
+### Step 2 — Compile Verilog Files
+
+Compile all Verilog source files and testbench files.
+
+---
+
+### Step 3 — Run Simulation
+
+```bash
+vsim ahb_to_apb_tb
+run -all
+```
+
+---
+
+## 📊 Simulation Outputs
+
+- AHB Read Operation
+- AHB Write Operation
+- APB Transfer Signals
+- FSM State Transitions
+- Address Decoding Verification
+- Timing Waveform Analysis
+
+---
+
+## 📈 Advantages
+
+- Simple and Efficient Architecture
+- Reduced Power Consumption
+- Reliable Data Communication
+- Supports Multiple Peripherals
+- Easy Integration with SoC Designs
+- Modular and Scalable Design
+
+---
+
+## 🏢 Applications
+
+- System-on-Chip (SoC) Design
+- ARM-Based Embedded Systems
+- FPGA Prototyping
+- ASIC Design
+- Peripheral Communication Systems
+- Low-Power Embedded Applications
+
+---
+
+## 🔮 Future Enhancements
+
+- Multi-Master Support
+- Pipelined Transfers
+- Burst Transfer Support
+- Error Handling Improvements
+- Advanced Verification using UVM
+- Low-Latency Optimization
+
+---
+
+## 📂 Project Structure
+
+```text
+FSM-Controlled-AHB-to-APB-Bridge/
+│
+├── apb_memory.v
+├── project.v
+├── project_tb.v
+├── README.md
+└── waveforms/
+```
+
+---
+
+## 📸 Simulation Preview
+
+Add simulation waveform screenshots or GIF here.
+
+```md
+![Waveform](waveform.png)
+```
+
+---
+
+## 👨‍💻 Author
+
+Developed using Verilog HDL for AMBA bus protocol conversion and FSM-based communication control.
+
+---
+
+## 📜 License
+
+This project is open-source and intended for educational and learning purposes.
 <img width="1478" height="615" alt="Image" src="https://github.com/user-attachments/assets/cee9085b-5739-43bb-bd47-d62c37eaf628" />
 <img width="809" height="459" alt="Image" src="https://github.com/user-attachments/assets/9837251e-7707-4c41-ad64-7be6b070964e" />
 <img width="767" height="528" alt="Image" src="https://github.com/user-attachments/assets/73bf80b6-c030-4b40-bf51-1b10967a17a9" />
